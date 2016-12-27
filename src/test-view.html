@@ -10,8 +10,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="shared-styles.html">
+<link rel="import" href="my-player.html">
 
-<dom-module id="my-view2">
+<dom-module id="test-view">
   <template>
     <style include="shared-styles">
       :host {
@@ -21,17 +22,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
     </style>
 
-    <div class="card">
-      <div class="circle">2</div>
-      <h1>View Two</h1>
-      <p>Ea duis bonorum nec, falli paulo aliquid ei eum.</p>
-      <p>Id nam odio natum malorum, tibique copiosae expetenda mel ea.Detracto suavitate repudiandae no eum. Id adhuc minim soluta nam.Id nam odio natum malorum, tibique copiosae expetenda mel ea.</p>
-    </div>
+    <div>Test View: serves as playground for new components</div>
+    <my-player name="Player the Great" country="ES" wins="32" losses="10" elo="1500"></my-player>
   </template>
 
   <script>
     Polymer({
-      is: 'my-view2',
+      is: 'test-view',
     });
   </script>
 </dom-module>

@@ -1,0 +1,74 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/flag-icon/flag-icon.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-player">
+    <template>
+        <style include="shared-styles">
+            :host {
+                display: inline-block;
+                padding: 10px;
+                background-color: darkgrey;
+                max-width: 250px
+            }
+            div {
+                padding: 2px 10px;
+            }
+
+            flag-icon {
+                min-width: 1.5em;
+                min-height: 1.5em;
+                padding: 0 10px;
+                vertical-align: bottom;
+            }
+
+            .win {
+                color: green;
+            }
+
+            .lose {
+                color: #ff1105;
+            }
+        </style>
+
+        <div>name: [[name]]</div>
+        <div>country: <flag-icon key="[[country]]" width="100"></flag-icon></div>
+
+        <div>wins: <span class="win">[[wins]]</span></div>
+        <div>losses: <span class="lose">[[losses]]</span></div>
+        <div>ELO: [[elo]]</div>
+
+    </template>
+
+    <script>
+		Polymer({
+			is: 'my-player',
+            ready() {
+				console.log('instantiated!!');
+            },
+			properties: {
+				name: {
+					type: String,
+					value:'Imma player!!!'
+				},
+				country: {
+					type: String,
+					value:'es'
+				},
+				wins: {
+					type: Number,
+					value:0
+				},
+				losses: {
+					type: Number,
+					value:0
+				},
+				elo: {
+					type: Number,
+					value:0
+				}
+			}
+
+		});
+    </script>
+</dom-module>
